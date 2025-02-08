@@ -55,7 +55,7 @@ check_blocklist() {
     do
         if [ $(zcat /proc/config.gz | grep "$config_name=y") ]; then
             abort "! Your Kernel has not disabled $config_name !"
-        else
+        configure else
             ui_print "- $config_name has been disabled."
         fi
     done       
